@@ -17,14 +17,19 @@ class Message implements ShouldBroadcast
    
     
     public function __construct(
+
+        public string $username,
         public string $message
-    ){}
+    )
+    {
+
+    }
    
    
-    public function broadcastOn(): array
+    public function broadcastOn()
     {
        
-        return [new Channel('chat')];
+        return new Channel('chat');
     }
 
     public function broadcastAs()

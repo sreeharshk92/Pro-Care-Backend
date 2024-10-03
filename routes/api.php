@@ -75,7 +75,7 @@ Route::post('/notifications', [NotificationController::class, 'updateBookingStat
 Route::get('/notifications/{userId}', [NotificationController::class, 'getUserNotifications']);
 
 //Chat
-Route::post('/message',[ChatController::class,'message']);
+Route::post('/messages', [ChatController::class, 'message']);
 
 
 //Admin register
